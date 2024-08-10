@@ -9,6 +9,11 @@ const handlePing = (res: Response) => {
 }
 
 const handlePushEvent = (body: GitHubPushEvent, res: Response) => {
+  if (body.ref !== 'refs/heads/main')
+  {
+    console.log(`Push event ignored for branch: ${body.ref}`);
+        return res.status(200).send(`No deployment for branch: ${body.ref}`);
+  }
     const repositoryName = body.repository.name
     const deployment = config.deployments.find((d) => d.hookName === repositoryName);
     
