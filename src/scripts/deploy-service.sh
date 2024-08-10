@@ -13,7 +13,6 @@ echo "API Deployment started: $(date)"
 
 echo "Changing directory to $SERVICE_DIR"
 cd "$SERVICE_DIR" || { echo "Error: Directory $SERVICE_DIR does not exist."; exit 1; }
-
 echo "Fetching Latest Updates"
 # Pull latest changes
 git fetch origin main
@@ -21,8 +20,10 @@ git reset --hard origin/main
 git submodule init
 git submodule update
 #Install dependencies
+rm -rf node_modules
 npm install
 
+echo $(ls node_modules/.bin) 
 # Run tests (To be implemented)
 # npm test
 

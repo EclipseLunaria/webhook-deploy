@@ -10,5 +10,5 @@ app.get("/", (req, res) => {
   res.send("Hello World");
 });
 
-app.use("/webhook", router);
+app.use("/", router);
 export default app;

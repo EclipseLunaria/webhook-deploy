@@ -3,7 +3,17 @@ import config from "../config";
 import executeDeployment from "../utils/executeDeployment";
 
 const webhookController = async (req: Request, res: Response) => {
-  const { hookName } = req.params;
+  // TODO: Make this more organized after getting services connected
+  console.log(req.header("X-GitHub-Event"))
+  if (req.header("X-GitHub-Event") === "ping"){
+    res.status(200).send("pong")
+    return;
+  }
+  console.log(req.headers)
+  const webhookBody = req.body
+  console.log(webhookBody)
+  console.log(webhookBody.repository)
+  const hookName = webhookBody.repository.name
   console.log(hookName);
   const deployment = config.deployments.find((d) => d.hookName === hookName);
   if (!deployment) {

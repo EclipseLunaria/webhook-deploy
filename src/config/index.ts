@@ -13,8 +13,7 @@ type DeployConfig = {
 };
 
 const config: DeployConfig = {
-  //   deployDir: "~/deployments",
-  deployDir: path.join(__dirname, "../deployments"),
+    deployDir: "/home/eclipse-deployment/deployments/manga-reader",
   scriptDir: path.join(__dirname, "../scripts"),
   deployments: [
     {
@@ -37,7 +36,7 @@ const config: DeployConfig = {
     },
     {
       deploymentName: "Series Info Service",
-      servicePath: "/series-info",
+      servicePath: "services/series-info",
       script: "deploy-service.sh",
       hookName: "series-info",
     },

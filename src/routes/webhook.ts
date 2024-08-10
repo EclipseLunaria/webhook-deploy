@@ -7,6 +7,6 @@ router.get("/", (req, res) => {
   res.send("Hello World");
 });
 
-router.post("/github/:hookName", webhookController);
+router.post("/github/", webhookController);
 
 export default router;
