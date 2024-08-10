@@ -1,0 +1,29 @@
+{
+  "name": "webhook-deploy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "typescript",
+    "webhook",
+    "deploy"
+  ],
+  "author": "Eclipse Lunaria",
+  "license": "ISC",
+  "description": "Server for handling service deployments using github webhooks",
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.2.0",
+    "dotenv": "^16.4.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
