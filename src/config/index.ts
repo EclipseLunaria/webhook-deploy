@@ -19,8 +19,8 @@ const config: DeployConfig = {
     {
       deploymentName: "Client",
       servicePath: "/client",
-      script: "deploy-service.sh",
-      hookName: "client",
+      script: "deploy-client.sh",
+      hookName: "manga-reader-client",
     },
     {
       deploymentName: "API Gateway",

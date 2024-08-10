@@ -3,8 +3,7 @@ import bodyParser from "body-parser";
 import router from "./routes";
 
 const app = express();
-
-app.use(bodyParser.json());
+app.use(express.raw({ type: 'application/json' }));
 
 app.get("/", (req, res) => {
   res.send("Hello World");

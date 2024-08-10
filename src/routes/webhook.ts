@@ -1,12 +1,9 @@
 import { Router } from "express";
-import webhookController from "../controllers/webhookController";
-
+import githubController from "../controllers/githubControllers";
+import { verifyGitHubSignature } from "../middlewares/githubAuth";
 const router = Router();
 
-router.get("/", (req, res) => {
-  res.send("Hello World");
-});
 
-router.post("/github/", webhookController);
+router.post("/github/",verifyGitHubSignature, githubController);
 
 export default router;
