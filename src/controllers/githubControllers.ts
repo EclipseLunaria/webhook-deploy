@@ -11,7 +11,7 @@ const githubController = async (req: Request, res: Response) => {
   console.log(req.body)
   const eventType = req.header("X-GitHub-Event")
   console.log("Event Recieved:", eventType)
-  console.log(req.body)
+
   switch (eventType) {
     case "ping":
       handlePing(res)

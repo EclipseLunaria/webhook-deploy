@@ -38,7 +38,7 @@ const config: DeployConfig = {
       deploymentName: "Series Info Service",
       servicePath: "services/series-info",
       script: "deploy-service.sh",
-      hookName: "series-info",
+      hookName: "series-info-service",
     },
   ],
 };
