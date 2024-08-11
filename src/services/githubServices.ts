@@ -1,6 +1,5 @@
 import { Response } from "express";
 import { GitHubPushEvent } from "../types/github";
-import { verifySignature } from "../utils/verifySignature";
 import config from "../config";
 import executeDeployment from "../utils/executeDeployment";
 
