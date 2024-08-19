@@ -32,13 +32,19 @@ const config: DeployConfig = {
       deploymentName: "Database Service",
       servicePath: "/services/database",
       script: "deploy-service.sh",
-      hookName: "database",
+      hookName: "database-service",
     },
     {
       deploymentName: "Series Info Service",
       servicePath: "services/series-info",
       script: "deploy-service.sh",
       hookName: "series-info-service",
+    },
+    {
+      deploymentName: "Authentication Service",
+      servicePath: "/authentication-service",
+      script: "deploy-service.sh",
+      hookName: "authentication-service",
     },
   ],
 };

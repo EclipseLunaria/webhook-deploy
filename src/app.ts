@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import router from "./routes";
 
 const app = express();
-app.use(bodyParser.raw({ type: '*/*', limit: '1mb' }));
+app.use(bodyParser.raw({ type: '*/*', limit: '50mb' }));
 
 app.use((req: Request, res: Response, next: NextFunction) => {
   (req as any).rawBody = req.body; // Store raw body for signature verification
